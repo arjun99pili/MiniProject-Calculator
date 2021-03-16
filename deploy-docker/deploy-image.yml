@@ -1,0 +1,10 @@
+- name: Pull Calc Docker Image
+  hosts: local
+  connection: local
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: Pull calc image from docker-hub
+      docker_image:
+        name: 19990507/calc
+        source: pull
