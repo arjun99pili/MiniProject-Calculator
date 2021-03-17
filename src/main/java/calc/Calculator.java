@@ -77,7 +77,11 @@ public class Calculator
     {
         double result = 1;
 
-        for(double i = 2; i < v; i++)
+        if(Math.floor(v) != v)
+        {
+            return -1;
+        }
+        for(double i = 2; i <= v; i++)
         {
             result *= i;
         }
@@ -92,6 +96,10 @@ public class Calculator
 
     public static double findExpo(double v, double b)
     {
+        if(Math.floor(b) != b)
+        {
+            return -1;
+        }
         return Math.pow(v, b);
     }
 
